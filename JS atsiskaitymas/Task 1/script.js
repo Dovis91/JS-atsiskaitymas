@@ -8,3 +8,17 @@ pamatyti jo pateikto svorio konvertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+
+document.querySelector("#forma").addEventListener("submit", (e) => {
+  e.preventDefault();
+  let kg = Number(e.target.elements.search.value);
+  let kgToPound = kg * 2.2046;
+  let kgToGrams = kg / 0.001;
+  let kgToOz = kg * 35.274;
+  document.querySelector("#output").innerHTML = `
+  <h3> Jūsų įvesti ${kg}kg į svarus bus: ${kgToPound} pounds </h3>
+  <h3> Jūsų įvesti ${kg}kg į gramus bus: ${kgToGrams} grams </h3>
+  <h3> Jūsų įvesti ${kg}kg į uncijas bus: ${kgToOz} Oz </h3>
+  `;
+  kg = e.target.elements.search.value = null;
+});
