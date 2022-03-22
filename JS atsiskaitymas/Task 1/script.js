@@ -16,9 +16,11 @@ document.querySelector("#forma").addEventListener("submit", (e) => {
   let kgToGrams = kg / 0.001;
   let kgToOz = kg * 35.274;
   document.querySelector("#output").innerHTML = `
-  <h3> Jūsų įvesti ${kg}kg į svarus bus: ${kgToPound} pounds </h3>
-  <h3> Jūsų įvesti ${kg}kg į gramus bus: ${kgToGrams} grams </h3>
-  <h3> Jūsų įvesti ${kg}kg į uncijas bus: ${kgToOz} Oz </h3>
+  <div>
+  <h3 class="classH3"> Jūsų įvesti ${kg}kg į svarus bus: ${kgToPound} pounds </h3>
+  <h3 class="classH3"> Jūsų įvesti ${kg}kg į gramus bus: ${kgToGrams} grams </h3>
+  <h3 class="classH3"> Jūsų įvesti ${kg}kg į uncijas bus: ${kgToOz} Oz </h3>
+  </div>
   `;
   kg = e.target.elements.search.value = null;
 });
