@@ -6,3 +6,18 @@ title, director, budget
 Metodas: 
 wasExpensive() - jeigu filmo budget bus didesnis nei 100 000 000 mln USD, tada gražins true, kitu atveju false.
 ------------------------------------------------------------------------------------------------------ */
+
+class Movie {
+  constructor(title, director, budget) {
+    this.title = title;
+    this.director = director;
+    this.budget = budget;
+  }
+  wasExspensive = () => {
+    let filmoBudget = this.budget > 100000000 ? true : false;
+    return filmoBudget;
+  };
+}
+
+let filmas = new Movie("Spider-Man: No way home", "Tom Holland", 2580000);
+console.log(filmas.wasExspensive());
